@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    platform: org.hibernate.dialect.PostgreSQL9Dialect
+    driverClassName: org.postgresql.Driver
+    jdbc-url: 'jdbc:postgresql://localhost:5432/oauth2'
+    username: postgres
+    password: postgres
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      temp:
+        use_jdbc_metadata_defaults: false
+  main:
+    allow-bean-definition-overriding: true
+
